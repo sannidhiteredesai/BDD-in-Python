@@ -1,0 +1,15 @@
+<!-- DISPLAYING THE FLASH MESSAGES -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <h2>{{ message }}</h2> <br>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<!-- WELCOME MESSAGE -->
+<br>
+<h3>Hi,</h3>
+<h3>Welcome to this demo application</h3>
+<p>You have been redirected to this page after login is successful</p>

@@ -1,0 +1,16 @@
+<!-- DISPLAYING THE FLASH MESSAGES -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <h2>{{ message }}</h2> <br>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<!-- LOGIN FORM -->
+<form action="/login" method="POST">
+    Username : <input type="text" name="username"><br><br>
+    Last name: <input type="password" name="password"><br><br>
+    <input type="submit" value="Submit">
+</form>
